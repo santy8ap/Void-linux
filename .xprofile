@@ -1,0 +1,17 @@
+#!/bin/sh
+# Xresources
+[ -f "$HOME/.Xresources" ] && xrdb -merge "$HOME/.Xresources" &
+
+# Wallpaper
+command -v hsetroot >/dev/null 2>&1 &&   hsetroot -cover "$HOME/.config/.wall/macos-big-sur-2560x1440-23119.jpg" &
+
+# Cursor
+xsetroot -cursor_name left_ptr &
+
+# Teclado
+setxkbmap es &
+
+# Polybar
+[ -x "$HOME/.config/polybar/launch.sh" ] && "$HOME/.config/polybar/launch.sh" &
+export QT_QPA_PLATFORMTHEME=qt5ct
+export TERMINAL=kitty

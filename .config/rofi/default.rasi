@@ -1,0 +1,47 @@
+* {
+  background-color: #111419;
+  text-color: #e8eaef;
+  selected: #1d2026;
+}
+
+window {
+  width: 40%;
+  location: center;
+  border: 0;
+}
+
+mainbox {
+  background-color: #111419;
+  border: 0;
+  padding: 5px;
+}
+
+listview {
+  lines: 5;
+  columns: 1;
+  scrollbar: false;
+}
+
+element {
+  padding: 0.3em;
+}
+
+element-icon {
+  size: 20;
+}
+
+element.selected {
+  background-color: @selected;
+}
+
+inputbar {
+  padding: 0.3em;
+}
+
+button {
+  padding: 0.1em;
+}
+
+button.selected {
+  background-color: @selected;
+}

@@ -1,0 +1,81 @@
+* {
+    base:     #1e1e2e;
+    surface0: #313244;
+    surface1: #45475a;
+    overlay1: #7f849c;
+    text:     #cdd6f4;
+    subtext:  #bac2de;
+    accent:   #cba6f7;
+    red:      #f38ba8;
+
+    background-color: transparent;
+    text-color:       @text;
+    border:  0; margin: 0; padding: 0; spacing: 0;
+}
+
+window {
+    background-color: @base;
+    border:           2px solid;
+    border-color:     @accent;
+    border-radius:    14px;
+    width:            480px;
+    padding:          8px;
+}
+
+mainbox {
+    background-color: transparent;
+    children:  [ inputbar, listview ];
+    spacing:   8px;
+}
+
+inputbar {
+    background-color: @surface0;
+    border-radius:    8px;
+    padding:          8px 12px;
+    spacing:          8px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @accent;
+    font: "JetBrainsMonoNL Nerd Font Bold 10";
+}
+
+entry {
+    background-color:  transparent;
+    text-color:        @text;
+    placeholder-color: @overlay1;
+    placeholder:       "buscar...";
+}
+
+listview {
+    background-color: transparent;
+    lines:   8;
+    columns: 1;
+    spacing: 2px;
+    padding: 4px 0;
+}
+
+element {
+    background-color: transparent;
+    border-radius:    6px;
+    padding:          8px 12px;
+    spacing:          8px;
+    children:         [ element-icon, element-text ];
+}
+
+element selected.normal {
+    background-color: @surface0;
+    text-color:       @accent;
+}
+
+element-icon {
+    size:             22px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+}
